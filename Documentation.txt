@@ -1,0 +1,6 @@
+***************6/22/25********************
+Ran into issue with level comparison
+When you set value to >500 minimum analog read is over 500
+When you set value to >x minimum analog value is x+#
+Current code will light up LED if the sensor is pushed down, however it does not read on conditional level value
+******************************************

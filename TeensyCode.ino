@@ -5,7 +5,7 @@ Last edited 6/22/25 by Pawel Chowdhury
 
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(14, INPUT_PULLDOWN);
 }
 
 // the loop function runs over and over again forever
@@ -15,7 +15,7 @@ void loop() {
   Serial.println("Analog value:");
   // Print output voltage in serial monitor
   Serial.println(level);
-  if(level >500){ //error here, when this value is adjusted the monitor reads a higher default value
+  if(level >200){ //error here, when this value is adjusted the monitor reads a higher default value
   digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
   delay(1000);                      // wait for a second
   digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
